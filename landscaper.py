@@ -101,6 +101,10 @@ while True:
         else:
             print("Please enter a valid choice (yes/no).")
 
+    if earnings >= 1000 and team_hired:
+        print("Congratulations! You've won the game!")
+        break
+
     choice = input("Do you want to cut the lawn with your teeth? (yes/no): ").lower()
 
     if choice == "no":
