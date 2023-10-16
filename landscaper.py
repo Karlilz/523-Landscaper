@@ -1,5 +1,6 @@
 earnings = 0  
 scissors = False  
+lawnmower = False  
 
 while True:
     if not scissors:
@@ -26,11 +27,32 @@ while True:
         else:
             print("Please enter a valid choice (yes/no).")
 
-    print("You can cut the lawn with your teeth.")
-    earnings += 1  
+    if not lawnmower and scissors:
+        print(f"Current earnings: ${earnings}")
+        buy_choice = input("Do you want to buy an old-timey push lawnmower for $25? (yes/no): ").lower()
+        if buy_choice == "yes" and earnings >= 25:
+            earnings -= 25
+            lawnmower = True
+            print("You bought an old-timey push lawnmower!")
+        elif buy_choice == "yes":
+            print("You don't have enough money to buy a lawnmower.")
+        elif buy_choice == "no":
+            pass
+        else:
+            print("Please enter a valid choice (yes/no).")
 
-    choice = input("Do you want to continue cutting the lawn with teeth? (yes/no): ").lower()
-    
+    if lawnmower:
+        choice = input("Do you want to cut the lawn with your old-timey push lawnmower? (yes/no): ").lower()
+        if choice == "yes":
+            earnings += 10  
+            print(f"You earned $10. Your total earnings: ${earnings}")
+        elif choice == "no":
+            pass
+        else:
+            print("Please enter a valid choice (yes/no).")
+
+    choice = input("Do you want to cut the lawn with your teeth? (yes/no): ").lower()
+
     if choice == "no":
         break  
 
