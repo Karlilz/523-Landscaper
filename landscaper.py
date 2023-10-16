@@ -94,8 +94,8 @@ while True:
     if team_hired:
         choice = input("Do you want to let your team of starving students cut the lawn? (yes/no): ").lower()
         if choice == "yes":
-            earnings += 200  
-            print(f"You earned $200. Your total earnings: ${earnings}")
+            earnings += 250  
+            print(f"You earned $250. Your total earnings: ${earnings}")
         elif choice == "no":
             pass
         else:
