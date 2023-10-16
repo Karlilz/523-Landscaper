@@ -16,10 +16,20 @@ while True:
         else:
             print("Please enter a valid choice (yes/no).")
 
+    if scissors:
+        choice = input("Do you want to cut the lawn with your rusty scissors? (yes/no): ").lower()
+        if choice == "yes":
+            earnings += 5  
+            print(f"You earned $5. Your total earnings: ${earnings}")
+        elif choice == "no":
+            pass
+        else:
+            print("Please enter a valid choice (yes/no).")
+
     print("You can cut the lawn with your teeth.")
     earnings += 1  
 
-    choice = input("Do you want to continue cutting the lawn with scissors? (yes/no): ").lower()
+    choice = input("Do you want to continue cutting the lawn with teeth? (yes/no): ").lower()
     
     if choice == "no":
         break  
