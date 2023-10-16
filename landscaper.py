@@ -44,8 +44,8 @@ while True:
     if lawnmower:
         choice = input("Do you want to cut the lawn with your old-timey push lawnmower? (yes/no): ").lower()
         if choice == "yes":
-            earnings += 10  
-            print(f"You earned $10. Your total earnings: ${earnings}")
+            earnings += 50  
+            print(f"You earned $50. Your total earnings: ${earnings}")
         elif choice == "no":
             pass
         else:
